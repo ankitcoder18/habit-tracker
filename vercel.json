@@ -6,11 +6,12 @@
     "api/index.js": {
       "runtime": "nodejs20.x",
       "memory": 1024,
-      "maxDuration": 60
+      "maxDuration": 60,
+      "includeFiles": "backend/**"
     }
   },
   "routes": [
-    { "src": "/api/(.*)", "dest": "/api/index.js" },
+    { "src": "/api(/.*)?", "dest": "/api/index.js" },
     { "src": "/(.*)", "dest": "/index.html", "status": 200 }
   ],
   "env": {

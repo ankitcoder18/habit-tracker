@@ -13,6 +13,12 @@ app.use(cors({
     credentials: true
 }))
 connectDB()
+
+// Root API endpoint
+app.get('/api', (req, res) => {
+    res.json({ success: true, message: 'Habit Tracker API' })
+})
+
 app.use('/api/user', userRouter)
 
 // Database stats endpoint for testing
@@ -37,6 +43,11 @@ app.get('/api/db-stats', async (req, res) => {
         res.status(500).json({ success: false, error: error.message });
     }
 });
+
+// 404 handler - must be AFTER all other routes
+app.use((req, res) => {
+    res.status(404).json({ success: false, message: 'Route not found', path: req.path })
+})
 
 // app.get('/',(req,res)=>{
 //     res.send("hello from server <h1>9555153411</h1>")
