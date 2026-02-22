@@ -13,7 +13,7 @@ const HabitContextProvider = ({ children }) => {
     const [token, setToken] = useState(cookie.get("token") || "")
     const [habitData, setHabitData] = useState([])
 
-    const backendUrl = 'http://localhost:3000'
+    const backendUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000'
     const getAuthToken = () => token || cookie.get("token")
 
     const fetchHabits = async () => {
