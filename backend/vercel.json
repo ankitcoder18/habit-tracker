@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "npm install",
-  "runtime": "nodejs20.x",
-  "env": {
-    "NODE_ENV": "production"
+  "functions": {
+    "api/index.js": {
+      "maxDuration": 60
+    }
   }
 }
