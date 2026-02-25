@@ -14,6 +14,11 @@ app.use(cors({
 }))
 connectDB()
 
+// Root endpoint
+app.get('/', (req, res) => {
+    res.json({ success: true, message: 'Habit Tracker API Running' })
+})
+
 // Root API endpoint
 app.get('/api', (req, res) => {
     res.json({ success: true, message: 'Habit Tracker API' })
