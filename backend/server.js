@@ -9,7 +9,19 @@ const app = express()
 const PORT = process.env.PORT || 4000
 app.use(express.json())
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:5175', 'https://*.vercel.app', 'https://*.vercelapp.com'],
+    origin: function(origin, callback) {
+        const allowedOrigins = [
+            'http://localhost:5173',
+            'http://localhost:5174',
+            'http://localhost:5175'
+        ];
+        
+        if (!origin || allowedOrigins.includes(origin) || /^https:\/\/.*\.vercel\.app$/.test(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
     credentials: true
 }))
 connectDB()
