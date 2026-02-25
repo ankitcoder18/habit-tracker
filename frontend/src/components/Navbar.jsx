@@ -22,7 +22,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="bg-gradient-to-r from-[#140746] via-purple-900 to-indigo-900 shadow-2xl sticky top-0 z-50">
+        <nav className="bg-linear-to-r from-[#140746] via-purple-900 to-indigo-900 shadow-2xl sticky top-0 z-50">
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center py-4">
                     {/* Logo/Brand */}
@@ -30,7 +30,7 @@ const Navbar = () => {
                         onClick={() => navigateTo('/')} 
                         className="flex items-center gap-3 cursor-pointer group"
                     >
-                        <div className="bg-gradient-to-br from-pink-500 to-rose-500 p-2 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                        <div className="bg-linear-to-br from-pink-500 to-rose-500 p-2 rounded-xl shadow-lg group-hover:scale-110 transition-transform duration-300">
                             <span className="text-3xl">🎯</span>
                         </div>
                         <h1 className="text-2xl md:text-3xl font-bold text-white group-hover:text-purple-200 transition-colors duration-300">
@@ -48,7 +48,7 @@ const Navbar = () => {
                                 </div>
                                 <button 
                                     onClick={handleLogout} 
-                                    className="bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 py-3 px-6 rounded-xl text-white font-semibold shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
+                                    className="bg-linear-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 py-3 px-6 rounded-xl text-white font-semibold shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
                                 >
                                     <FaSignOutAlt /> Logout
                                 </button>
@@ -57,7 +57,7 @@ const Navbar = () => {
                             <div className="flex gap-3">
                                 <button 
                                     onClick={() => navigateTo('/login')} 
-                                    className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 py-3 px-6 rounded-xl text-white font-semibold shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
+                                    className="bg-linear-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 py-3 px-6 rounded-xl text-white font-semibold shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center gap-2"
                                 >
                                     <FaSignInAlt /> Sign In
                                 </button>
@@ -92,7 +92,7 @@ const Navbar = () => {
                                     </div>
                                     <button 
                                         onClick={handleLogout} 
-                                        className="w-full bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 py-3 px-4 rounded-xl text-white font-semibold shadow-lg flex items-center justify-center gap-2 transition-all"
+                                        className="w-full bg-linear-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 py-3 px-4 rounded-xl text-white font-semibold shadow-lg flex items-center justify-center gap-2 transition-all"
                                     >
                                         <FaSignOutAlt /> Logout
                                     </button>
@@ -101,7 +101,7 @@ const Navbar = () => {
                                 <>
                                     <button 
                                         onClick={() => navigateTo('/login')} 
-                                        className="w-full bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 py-3 px-4 rounded-xl text-white font-semibold shadow-lg flex items-center justify-center gap-2 transition-all"
+                                        className="w-full bg-linear-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 py-3 px-4 rounded-xl text-white font-semibold shadow-lg flex items-center justify-center gap-2 transition-all"
                                     >
                                         <FaSignInAlt /> Sign In
                                     </button>
